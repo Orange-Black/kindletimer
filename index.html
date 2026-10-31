@@ -13,6 +13,21 @@
         #RemainM,#RemainS {
             font-family: 'Ubuntu', sans-serif;
         }
+        /* 自适应尺寸：窄屏按视口宽度等比缩放，600px 以上保持原始大小 */
+        .title    { font-size: 8vw; }
+        .clock    { font-size: 28.5vw; }
+        .subtitle { font-size: 5.4vw; }
+        .btn, .btn-lg { text-align: center; font-size: 5.4vw; height: 13.4vw; }
+        .btn    { width: 24.7vw; }
+        .btn-lg { width: 50vw; }
+        @media (min-width: 600px) {
+            .title    { font-size: 3em; }
+            .clock    { font-size: 10.7em; }
+            .subtitle { font-size: 2em; }
+            .btn, .btn-lg { font-size: 2em; height: 80px; }
+            .btn    { width: 148px; }
+            .btn-lg { width: 300px; }
+        }
     </style>
     <script type="application/javascript">
         var countdown=240;
@@ -58,19 +73,19 @@
 
 <div>
     <div>
-        <span style=font-size:3em>盖Kindle，面更香</span>
+        <span class="title">盖Kindle，面更香</span>
         </div>
 </div>
 
 <br> <br>
 
-<div style=font-size:2em>
+<div class="subtitle">
     <div>
         剩余时间
     </div>
 </div>
 
-<div style=font-size:10.7em>
+<div class="clock">
     <div>
         <strong id="RemainM">04</strong>:<strong id="RemainS">00</strong>
     </div>
@@ -78,14 +93,14 @@
 
 <div>
     <div>
-        <input type="button" style="width:148px; height:80px;font-size:2em;text-align:center" value="+10s" onclick="changetime(+10)" />
-        <input type="button" style="width:148px; height:80px;font-size:2em;text-align:center" value="-10s" onclick="changetime(-10)" />
+        <input type="button" class="btn" value="+10s" onclick="changetime(+10)" />
+        <input type="button" class="btn" value="-10s" onclick="changetime(-10)" />
     </div>
 </div>
 <br>
 <div>
     <div>
-        <input type="button" style="width:300px; height:80px;font-size:2em;text-align:center" value="开始泡面" onclick="settime(this)" />
+        <input type="button" class="btn-lg" value="开始泡面" onclick="settime(this)" />
     </div>
 </div>
 </body>
