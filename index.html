@@ -10,6 +10,11 @@
             src: url('src/Ubuntu-R.woff2') format('woff2'),
                  url('src/Ubuntu-R.woff') format('woff');
         }
+        /* 整行（含两个数字之间的冒号）统一用 Ubuntu，
+           冒号是 <strong> 之间的裸文本节点，只写 #RemainM/#RemainS 会漏掉它 */
+        .clock {
+            font-family: 'Ubuntu', sans-serif;
+        }
         #RemainM,#RemainS {
             font-family: 'Ubuntu', sans-serif;
         }
